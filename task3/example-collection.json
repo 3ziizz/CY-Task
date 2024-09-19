@@ -1,0 +1,137 @@
+{
+  "info": {
+    "_postman_id": "example-collection",
+    "name": "Example Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://example.com/api/users",
+          "protocol": "https",
+          "host": [
+            "example",
+            "com"
+          ],
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "404 Not Found",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://example.com/api/users",
+              "protocol": "https",
+              "host": [
+                "example",
+                "com"
+              ],
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "status": "404",
+          "code": 404,
+          "responseTime": 1476,
+          "responseSize": 1001,
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "cookies": [],
+          "body": ""
+        }
+      ],
+      "tests": [
+        {
+          "id": "404-status-code",
+          "name": "Status code is 404",
+          "type": "text/javascript",
+          "exec": [
+            "pm.test(\"Status code is 404\", function () {",
+            "    pm.response.to.have.status(404);",
+            "});"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Post Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://example.com/api/create-user",
+          "protocol": "https",
+          "host": [
+            "example",
+            "com"
+          ],
+          "path": [
+            "api",
+            "create-user"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "405 Method Not Allowed",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://example.com/api/create-user",
+              "protocol": "https",
+              "host": [
+                "example",
+                "com"
+              ],
+              "path": [
+                "api",
+                "create-user"
+              ]
+            }
+          },
+          "status": "405",
+          "code": 405,
+          "responseTime": 184,
+          "responseSize": 157,
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "cookies": [],
+          "body": ""
+        }
+      ],
+      "tests": [
+        {
+          "id": "405-status-code",
+          "name": "Status code is 405",
+          "type": "text/javascript",
+          "exec": [
+            "pm.test(\"Status code is 405\", function () {",
+            "    pm.response.to.have.status(405);",
+            "});"
+          ]
+        }
+      ]
+    }
+  ]
+}
