@@ -13,3 +13,7 @@ variable "region" {
   default = "us-east-1"
 }
 
+variable "worker_count" {
+  type = number
+  default = 1
+}
